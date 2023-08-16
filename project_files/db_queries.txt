@@ -1,0 +1,36 @@
+
+Step1:
+------
+Execute the following queries 1 by one
+
+create schema mvc_jdbc;
+
+use mvc_jdbc;
+
+CREATE TABLE `books` (
+  `bookId` int NOT NULL AUTO_INCREMENT,
+  `bookName` varchar(45) NOT NULL,
+  `bookPrice` decimal(7,2) NOT NULL,
+  `noOfCopies` int NOT NULL,
+  `inStock` bit(1) NOT NULL,
+  `dateOfPublication` date NOT NULL,
+  `bookCover` longblob,
+  PRIMARY KEY (`bookId`),
+  UNIQUE KEY `bookId_UNIQUE` (`bookId`)
+);
+
+INSERT INTO `books` (
+`bookName`, `bookPrice`, `noOfCopies`, 
+`inStock`, `dateOfPublication`) 
+VALUES ('Let Us C', '200', '10', true, '2020-06-06');
+
+INSERT INTO `books` (
+`bookName`, `bookPrice`, `noOfCopies`, 
+`inStock`, `dateOfPublication`) 
+VALUES ('Java-TCR', '700', '0', false, '2020-08-08');
+
+Step2:
+------
+Upload the images
+
+Refer the images in upload folder 1 by 1
